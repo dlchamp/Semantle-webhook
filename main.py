@@ -9,7 +9,7 @@ def check_create_json():
     '''check for history.json, if not exists create'''
     print('Script started, checking for history.json...')
 
-    if not path.exists('./data/history.json'):
+    if not path.exists('./history.json'):
         print('history.json not found, creating...')
         with open('./history.json', 'w') as f:
             dump({}, f)
