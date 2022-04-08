@@ -11,7 +11,7 @@ def check_create_json():
 
     if not path.exists('./data/history.json'):
         print('history.json not found, creating...')
-        with open('./data/history.json', 'w') as f:
+        with open('./history.json', 'w') as f:
             dump({}, f)
     else:
         print('history.json was found, moving on...')
