@@ -1,9 +1,9 @@
 from os import path
 from json import dump
-from utils import scrape, store
+from utils import scrape, store, webhook
 
 # input your channel webhook URL - Edit channel > integrations > webhook > New webhook
-WEBHOOK_URL = ''
+WEBHOOK_URL = 'https://discord.com/api/webhooks/961835080819544064/i5pfYcxV1-hbV4vzPbgNjVFDacdFUQxK97N0OUlKMtqHNSa7-rwf-CLQ2NigpGNAhQUm'
 
 def check_create_json():
     '''check for history.json, if not exists create'''
@@ -48,7 +48,7 @@ def main():
 
         else:
             # send new link and puzle number to webhook
-            webhook.send_message()
+            webhook.send_message(WEBHOOK_URL, puzzle_number, link)
 
             # update json with new scraped link
             old_data[link] = puzzle_number
