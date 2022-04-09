@@ -26,6 +26,7 @@ def main():
 
     print('Scrape successful, checking stored link...')
     old_data = store.load_json()
+    new_data = {}
 
     if not old_data:
         print('No link found, storing scraped link...')
@@ -51,8 +52,8 @@ def main():
             webhook.send_message(WEBHOOK_URL, puzzle_number, link)
 
             # update json with new scraped link
-            old_data[link] = puzzle_number
-            store.update_json(old_data)
+            [link] = puzzle_number
+            store.update_json(new_data)
 
 
 if __name__ == '__main__':
