@@ -3,7 +3,7 @@ from json import dump
 from utils import scrape, store, webhook
 
 # input your channel webhook URL - Edit channel > integrations > webhook > New webhook
-WEBHOOK_URL = 'https://discord.com/api/webhooks/961835080819544064/i5pfYcxV1-hbV4vzPbgNjVFDacdFUQxK97N0OUlKMtqHNSa7-rwf-CLQ2NigpGNAhQUm'
+WEBHOOK_URL = ''
 
 def check_create_json():
     '''check for history.json, if not exists create'''
