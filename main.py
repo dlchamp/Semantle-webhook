@@ -52,7 +52,7 @@ def main():
             webhook.send_message(WEBHOOK_URL, puzzle_number, link)
 
             # update json with new scraped link
-            [link] = puzzle_number
+            new_data[link] = puzzle_number
             store.update_json(new_data)
 
 
